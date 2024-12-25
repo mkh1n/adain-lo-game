@@ -7,10 +7,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const answerElement = document.getElementById('answer');
     let currentQuestion = null;
     let currentStage = 1;
+
+    // Function to preload images
+    function preloadImage(src) {
+        const img = new Image();
+        img.src = src;
+        img.style.display = 'none'; // Hide the image
+        document.body.appendChild(img);
+    }
+
     fetch('./questions/questions.json')
     .then(response => response.json())
     .then(data => {
         const questions = data;
+
+        // Preload background images
+        questions.forEach((q, index) => {
+            preloadImage(`./resources/bg/${index + 1}.jpg`);
+        });
+
+        // Preload interactive elements
+        questions.forEach((q, index) => {
+            preloadImage(`./resources/interactive-elements/${index + 1}.png`);
+        });
+
+        // Preload videos if any
+        questions.forEach(q => {
+            if (q.video === 'true') {
+                const video = document.createElement('video');
+                video.src = q.question;
+                video.style.display = 'none'; // Hide the video
+                document.body.appendChild(video);
+            }
+        });
+
         questions.forEach((q, index) => {
             const sceneDiv = document.createElement('div');
             sceneDiv.className = 'scene hidden';
@@ -27,6 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
             interactiveElement.id = `interactive${index + 1}`;
             interactiveElement.setAttribute('data-index', index + 1);
             sceneDiv.appendChild(interactiveElement);
+
+            // Add false-interactive-element with 50% probability
+            if (Math.random() < 0.5) {
+                const falseInteractiveElement = document.createElement('div');
+                falseInteractiveElement.className = 'false-interactive-element';
+                falseInteractiveElement.id = `false-interactive${index + 1}`;
+                falseInteractiveElement.setAttribute('data-index', index + 1);
+                sceneDiv.appendChild(falseInteractiveElement);
+            }
 
             gameContainer.appendChild(sceneDiv);
         });
@@ -72,11 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     })
     .catch(error => console.error('Error loading questions:', error));
+
     startButton.addEventListener('click', () => {
         mainScreen.classList.add('hidden');
         gameContainer.classList.remove('hidden');
         document.getElementById(`scene${currentStage}`).classList.remove('hidden');
     });
-
-    
 });
