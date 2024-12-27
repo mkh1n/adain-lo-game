@@ -77,10 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (question) {
                     currentQuestion = question;
+                    questionElement.innerHTML = ''; // Clear previous content
                     if (question.video === 'true') {
-                        questionElement.innerHTML = `<div class="video-container"><video controls><source src="${question.question}" type="video/mp4"></video></div>`;
+                        const parts = question.question.split(';');
+                        const questionText = parts[0].trim();
+                        const videoPath = parts[1].trim();
+
+                        questionElement.innerHTML = `${questionText}<div class="video-container"><video controls><source src="${videoPath}" type="video/mp4"></video></div>`;
                     } else {
-                        questionElement.textContent = question.question;
+                        const parts = question.question.split(';');
+                        const questionText = parts[0].trim();
+                        const imagePaths = parts.slice(1).map(path => path.trim());
+
+                        questionElement.innerText = questionText
+
+                        if (question.hasImages === 'true') {
+                            const imageContainer = document.createElement('div');
+                            imageContainer.className = 'image-container';
+                            imagePaths.forEach(path => {
+                                const img = document.createElement('img');
+                                img.src = path;
+                                img.className = 'question-image';
+                                imageContainer.appendChild(img);
+                            });
+                            questionElement.appendChild(imageContainer);
+                        }
                     }
                     answerElement.textContent = question.answer;
                     questionElement.classList.add('show');

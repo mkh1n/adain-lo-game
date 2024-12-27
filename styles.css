@@ -225,7 +225,6 @@ body {
   align-items: center;
   text-align: center;
   word-wrap: break-word;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: pre-wrap;
 }
@@ -243,7 +242,23 @@ body {
   height: auto;
   transform: translateY(0);
 }
+.question-image {
+  height: 190px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  object-fit: contain;
+}
 
+.image-container {
+  position: absolute;
+  left: 50%;
+  flex-wrap: wrap;
+  transform: translate(-50%, 13%);
+  display: flex;
+  margin-top: 10px;
+  width: 1000px;
+  gap: 10px;
+}
 @keyframes scrollUnroll {
   0% {
     transform: translate(-50%, -50%) scaleY(0);
