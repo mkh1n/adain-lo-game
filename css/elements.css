@@ -1,0 +1,163 @@
+
+.interactive-element, .false-interactive-element{
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+  }
+  .interactive-element:hover, .false-interactive-element:hover{
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(5px 5px 5px #000);
+    filter: drop-shadow(5px 5px 5px #000);
+  }
+  #interactive1{
+    background-image: url(../resources/interactive-elements/1.png);
+    height: 114px;
+    width: 119px;
+    bottom: 29px;
+    left: 191px;
+    filter: brightness(0.7) hue-rotate(99deg) drop-shadow(0 7px 2px rgba(0, 0, 0, .5));
+  }
+  
+  #interactive2 {
+    background-image: url(../resources/interactive-elements/2.png);
+    height: 200px;
+    filter: brightness(0.8) hue-rotate(236deg) drop-shadow(0 10px 2px rgba(0, 0, 0, 0.6));
+    width: 100px;
+    bottom: 23px;
+    right: 472px;
+  }
+  #interactive3 {
+    background-image: url(../resources/interactive-elements/3.png);
+    height: 200px;
+    filter: brightness(0.4) hue-rotate(17deg);
+    bottom: -49px;
+    width: 400px;
+    left: 200px;
+  }
+  #interactive4 {
+    background-image: url(../resources/interactive-elements/4.png);
+    height: 235px;
+    filter: brightness(0.4) hue-rotate(101deg);
+    top: -48px;
+    width: 400px;
+    right: 200px;
+  }
+  #interactive5 {
+    background-image: url(../resources/interactive-elements/5.png);
+    height: 235px;
+    filter: brightness(0.8) hue-rotate(101deg) drop-shadow(0 7px 2px rgba(0, 0, 0, .5));
+    bottom: 7px;
+    width: 130px;
+    right: 113px;
+  }
+  #interactive6 {
+    background-image: url(../resources/interactive-elements/6.png);
+    height: 216px;
+    filter: brightness(0.9) hue-rotate(-8deg) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    top: 101px;
+    width:118.3px;
+    left: 243px;
+  }
+  #interactive7{
+    rotate: -32deg;
+    background-image: url(../resources/interactive-elements/7.png);
+    height: 216px;
+    filter: brightness(0.6) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) sepia(1);
+    bottom: -36px;
+    width: 167.3px;
+    right: 349px;
+  }
+  
+  #interactive8{
+    background-image: url(../resources/interactive-elements/8.png);
+    height: 216px;
+    filter: brightness(0.4) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) sepia(1);
+    bottom: -78px;
+    width: 167.3px;
+    left: 122px;
+  }
+  #interactive9{
+    rotate: 18deg;
+    background-image: url(../resources/interactive-elements/9.png);
+    height: 216px;
+    filter: brightness(0.7) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: 0px;
+    width: 167.3px;
+    left: 217px;
+  }
+
+
+@keyframes scrollUnroll {
+    0% {
+      transform: translate(-50%, -50%) scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) scaleY(1);
+      opacity: 1;
+    }
+  }
+  @keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+  }
+  
+  .falling-element {
+    animation: fall 2s ease-in-out forwards;
+  }
+  @keyframes rollRight {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) rotate(360deg);
+        opacity: 0;
+    }
+  }
+  
+  .rolling-element-right {
+    animation: rollRight 2s ease-in-out forwards;
+  }
+  
+  @keyframes rollLeft {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100vw) rotate(-360deg);
+        opacity: 0;
+    }
+  }
+  
+  .rolling-element-left {
+    animation: rollLeft 2s ease-in-out forwards;
+  }
+  
+  @keyframes dissolve {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+  }
+  
+  .dissolving-element {
+    animation: dissolve 2s ease-in-out forwards;
+  }
+  /* Styles for video */

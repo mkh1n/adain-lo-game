@@ -5,20 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Quest</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/moss.css">
+    <link rel="stylesheet" href="./css/elements.css">
 </head>
 
 <body>
     <div id="main-screen">
-        <h1>Ущелье<br>Гигантов</h1> <button id="start-button">Начать игру</button>
+        <h1>Ущелье<br>Гигантов</h1>
+        <button id="start-button">Начать игру</button>
     </div>
-    <div id="game-container" class="hidden"> </div>
+    <div id="game-container" class="hidden">
+        <div id="titanContainer">
+            <img id="titan" src="./resources/ui/giant.png">
+            <div id="moss1" class="mossEl"></div>
+            <div id="moss2" class="mossEl"></div>
+            <div id="moss3" class="mossEl"></div>
+            <div id="moss4" class="mossEl"></div>
+            <div id="moss5" class="mossEl"></div>
+            <div id="moss6" class="mossEl"></div>
+            <div id="moss7" class="mossEl"></div>
+            <div id="moss8" class="mossEl"></div>
+            <div id="moss9" class="mossEl"></div>
+            <div id="moss10" class="mossEl"></div>
+            <div id="moss11" class="mossEl"></div>
+            <div id="moss12" class="mossEl"></div>
+            <div id="moss13" class="mossEl"></div>
+            <div id="moss14" class="mossEl"></div>
+            <div id="moss15" class="mossEl"></div>
+            <div id="moss16" class="mossEl"></div>
+            <div id="moss17" class="mossEl"></div>
+            <div id="moss18" class="mossEl"></div>
+            <div id="moss19" class="mossEl"></div>
+            <div id="moss20" class="mossEl"></div>
+        </div>
+        <div id="switchButton"></div>
+    </div>
     <div id="popup" class="popup">
         <div class="popup-content">
             <p id="question"></p>
             <p id="answer"></p>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>

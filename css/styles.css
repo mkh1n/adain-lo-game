@@ -1,0 +1,226 @@
+@font-face {
+  font-family: "DwarvenStonecraft";
+  src: url('../resources/fonts/DwarvenStonecraftCyr.otf');
+}
+@font-face {
+  font-family: "Pixel";
+  src: url('../resources/fonts/pixel-anchor-jack_0.ttf');
+}
+
+
+body {
+  margin: 0;
+  font-family: 'DwarvenStonecraft';
+  background-color: black;
+}
+#main-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../resources/bg/main.webp");
+  background-size: cover;
+  color: #ecf0f1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1280px;
+  height: 720px;
+  transform: translate(-50%, -50%);
+}
+
+#main-screen h1 {
+  font-size: 54px;
+  font-weight: 100;
+  margin-bottom: 60px;
+  font-family: "Pixel";
+  text-shadow: black 0 0 15px;
+}
+
+#main-screen button {
+  background-image: url("../resources/ui/playButton.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 320px;
+  height: 100px;
+  padding-bottom: 30px;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-family: "Pixel";
+
+}
+
+#main-screen button:hover {
+  filter: brightness(0.8);
+  transform: scale(1.04);
+}
+
+#game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.scene {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  display: none !important;
+}
+.hiddenText{
+  opacity: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup {  
+  padding: 78px 45px;
+  height: 417px;
+  display: none;
+  width: 492px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../resources/ui/scroll.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(5px 5px 5px #000);
+  filter: drop-shadow(5px 5px 5px #000);
+  transition: transform 0.3s, filter 0.3s;
+  z-index: 1000;
+  font-size: 25px;
+  animation: scrollUnroll 0.5s ease-out forwards;
+  cursor: pointer;
+}
+
+.popup:hover {
+  filter: drop-shadow(6px 6px 6px #000);
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+}
+
+.popup-content p {
+  opacity: 0;
+  height: 0;
+  transform: translateY(20px);
+  font-size: 40px;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.popup-content p.show {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0);
+}
+.question-image {
+  height: 190px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.image-container {
+  position: absolute;
+  left: 50%;
+  flex-wrap: wrap;
+  transform: translate(-50%, 13%);
+  display: flex;
+  margin-top: 10px;
+  width: 1000px;
+  gap: 10px;
+}
+#switchButton{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 40px;
+  right: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  background-image: url(../resources/ui/eye.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  filter: drop-shadow(6px 6px 6px #000);
+}
+#titanContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);;
+  display: none;
+  width: 1280px;
+  height: 720px;
+  z-index: 100;
+  background-image: url("../resources/bg/titanBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#titan{
+  position: absolute;
+  top: 54%;
+  height: 700px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.showTitanContainer{
+  display: flex !important;
+}
+.popup-content .video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.popup-content .video-container video {
+  border-radius: 10px;
+  max-width: 450px;
+  max-height: 383px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

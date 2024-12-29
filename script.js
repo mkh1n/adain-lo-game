@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.getElementById('start-button');
+    const switchButton = document.getElementById('switchButton');
+    const titanContainer = document.getElementById('titanContainer');
     const mainScreen = document.getElementById('main-screen');
     const gameContainer = document.getElementById('game-container');
     const popup = document.getElementById('popup');
+    const mossElements = document.querySelectorAll('.mossEl'); // Используем querySelectorAll для выбора всех элементов с классом mossEl
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
     let currentQuestion = null;
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const questionText = parts[0].trim();
                         const imagePaths = parts.slice(1).map(path => path.trim());
 
-                        questionElement.innerText = questionText
+                        questionElement.innerText = questionText;
 
                         if (question.hasImages === 'true') {
                             const imageContainer = document.createElement('div');
@@ -107,6 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     questionElement.classList.add('show');
                     popup.style.display = 'block';
                 }
+            });
+        });
+
+        switchButton.addEventListener('click', (event) => {
+            titanContainer.classList.toggle('showTitanContainer');
+        });
+
+        mossElements.forEach((mossElement) => {
+            mossElement.addEventListener('click', (e) => {
+                mossElement.classList.add('visibleMoss');
             });
         });
 
