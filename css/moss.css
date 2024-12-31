@@ -9,6 +9,8 @@
     background-repeat: no-repeat;
     transition: 0.2s;
     cursor: pointer;
+    filter: drop-shadow(2px 4px 6px black);
+
 }
 .mossEl:hover{
     opacity: 0.3;

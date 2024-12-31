@@ -58,11 +58,11 @@
   #interactive6 {
     background-image: url(../resources/interactive-elements/6.png);
     height: 216px;
-    filter: brightness(0.9) hue-rotate(-8deg) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    filter: brightness(0.9) hue-rotate(-8deg) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) grayscale(50);
     top: 101px;
-    width:118.3px;
+    width: 118.3px;
     left: 243px;
-  }
+    }
   #interactive7{
     rotate: -32deg;
     background-image: url(../resources/interactive-elements/7.png);
@@ -74,12 +74,13 @@
   }
   
   #interactive8{
+    rotate: -20deg;
     background-image: url(../resources/interactive-elements/8.png);
     height: 216px;
     filter: brightness(0.4) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) sepia(1);
-    bottom: -78px;
+    bottom: -42px;
     width: 167.3px;
-    left: 122px;
+    right: 122px;
   }
   #interactive9{
     rotate: 18deg;
@@ -90,6 +91,100 @@
     width: 167.3px;
     left: 217px;
   }
+  #interactive10{
+    background-image: url(../resources/interactive-elements/10.png);
+    height: 417px;
+    filter: brightness(0.9) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) sepia(1);
+    bottom: -153px;
+    width: 160.3px;
+    right: 209px;
+  }
+  #interactive11{
+    background-image: url(../resources/interactive-elements/11.png);
+    height: 213px;
+    filter: brightness(0.9) drop-shadow(0 10px 6px rgba(0, 0, 0, .6)) sepia(1);
+    bottom: 114px;
+    width: 204.3px;
+    right: 365px;
+  }
+  #interactive12{
+    rotate: -17deg;
+    background-image: url(../resources/interactive-elements/12.png);
+    height: 216px;
+    filter: brightness(0.8) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: 101px;
+    width: 233.3px;
+    left: 186px;
+  }
+  #interactive13{
+    rotate: 18deg;
+    background-image: url(../resources/interactive-elements/13.png);
+    height: 262px;
+    filter: brightness(0.9) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: 117px;
+    width: 196.3px;
+    right: 217px;
+  }
+  #interactive14{
+    background-image: url(../resources/interactive-elements/14.png);
+    height: 216px;
+    filter: brightness(0.6) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: -19px;
+    width: 167.3px;
+    right: 299px;
+  }
+  #interactive15{
+    background-image: url(../resources/interactive-elements/15.png);
+    height: 243px;
+    filter: brightness(1.6) drop-shadow(0 10px 6px rgba(0, 0, 0, .5));
+    bottom: -55px;
+    width: 208.3px;
+    left: 121px;
+  }
+  #interactive16{
+    background-image: url(../resources/interactive-elements/16.png);
+    height: 216px;
+    filter: brightness(0.6) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: -73px;
+    width: 178.3px;
+    left: 20%;
+  }
+  #interactive17{
+    background-image: url(../resources/interactive-elements/17.png);
+    height: 216px;
+    filter: brightness(0.9) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: -40px;
+    width: 167.3px;
+    right: 250px;
+  }
+  #interactive18{
+    rotate: 5deg;
+    background-image: url(../resources/interactive-elements/18.png);
+    height: 287px;
+    filter: brightness(0.5) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: 68px;
+    width: 470px;
+    left: 122px;
+  }
+  #interactive19{
+    rotate: -1deg;
+    background-image: url(../resources/interactive-elements/19.png);
+    height: 216px;
+    filter: brightness(0.9) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: -57px;
+    width: 212.3px;
+    left: 217px;
+  }
+  #interactive20{
+    rotate: -1deg;
+    background-image: url(../resources/interactive-elements/2.png);
+    height: 216px;
+    filter: brightness(0.7) drop-shadow(0 10px 6px rgba(0, 0, 0, .6));
+    bottom: 50px;
+    width: 212.3px;
+    right: 100px;
+  }
+
 
 
 @keyframes scrollUnroll {

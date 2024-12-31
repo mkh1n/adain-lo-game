@@ -82,5 +82,61 @@
     "hasImages": "false",
     "question": "Какая страна является самой большой по площади?",
     "answer": "Ответ: Россия"
+  },
+  {
+    "index": 13,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какой автор написал роман 'Война и мир'?",
+    "answer": "Ответ: Лев Толстой"
+  },
+  {
+    "index": 14,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какая река является самой длинной в мире?",
+    "answer": "Ответ: Нил"
+  },
+  {
+    "index": 15,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какой элемент периодической таблицы имеет символ 'Au'?",
+    "answer": "Ответ: Золото"
+  },
+  {
+    "index": 16,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какая страна известна своими тюльпанами и ветряными мельницами?",
+    "answer": "Ответ: Нидерланды"
+  },
+  {
+    "index": 17,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какой химический элемент имеет символ 'O'?",
+    "answer": "Ответ: Кислород"
+  },
+  {
+    "index": 18,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какая страна является родиной суши?",
+    "answer": "Ответ: Япония"
+  },
+  {
+    "index": 19,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какой химический элемент имеет символ 'Na'?",
+    "answer": "Ответ: Натрий"
+  },
+  {
+    "index": 20,
+    "video": "false",
+    "hasImages": "false",
+    "question": "Какая страна известна своими фиордами?",
+    "answer": "Ответ: Норвегия"
   }
 ]

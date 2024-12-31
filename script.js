@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mossElements = document.querySelectorAll('.mossEl'); // Используем querySelectorAll для выбора всех элементов с классом mossEl
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
+    const victoryScreen = document.getElementById('victory-screen');
     let currentQuestion = null;
     let currentStage = 1;
 
@@ -140,9 +141,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById(`scene${currentStage}`).classList.add('hidden');
                     currentStage++;
                     document.getElementById(`scene${currentStage}`).classList.remove('hidden');
+                } else {
+                    // Show victory screen
+                    victoryScreen.style.display = 'block';
                 }
             }
         });
+
     })
     .catch(error => console.error('Error loading questions:', error));
 
