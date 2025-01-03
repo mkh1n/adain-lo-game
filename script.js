@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainScreen = document.getElementById('main-screen');
     const gameContainer = document.getElementById('game-container');
     const popup = document.getElementById('popup');
-    const mossElements = document.querySelectorAll('.mossEl'); // Используем querySelectorAll для выбора всех элементов с классом mossEl
     const questionElement = document.getElementById('question');
     const answerElement = document.getElementById('answer');
     const victoryScreen = document.getElementById('victory-screen');
@@ -19,6 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
         img.style.display = 'none'; // Hide the image
         document.body.appendChild(img);
     }
+
+    for (i = 1; i <= 30; i++) {
+        var mossEl = document.createElement("div");
+        mossEl.classList.add("mossEl");
+        mossEl.setAttribute('id', "moss" + String(i));
+        titanContainer.append(mossEl)
+    }
+    const mossElements = document.querySelectorAll('.mossEl'); // Используем querySelectorAll для выбора всех элементов с классом mossEl
 
     fetch('./questions/questions.json')
     .then(response => response.json())
@@ -121,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mossElements.forEach((mossElement) => {
             mossElement.addEventListener('click', (e) => {
                 mossElement.classList.add('visibleMoss');
+                // mossElement.style.display = "none"
             });
         });
 

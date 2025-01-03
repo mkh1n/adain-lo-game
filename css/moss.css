@@ -1,188 +1,343 @@
-/* Общие стили для всех элементов */
 .mossEl {
     position: absolute;
     opacity: 0;
-    width: 200px; /* Пример ширины */
-    height: 130px; /* Пример высоты */
+    width: 163px; /* Уменьшенная ширина */
+    height: 106px; /* Уменьшенная высота */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.2s;
     cursor: pointer;
     filter: drop-shadow(2px 4px 6px black);
-
 }
-.mossEl:hover{
+
+.mossEl:hover {
     opacity: 0.3;
 }
+
 .visibleMoss {
     pointer-events: none;
-
-    cursor:auto;
+    cursor: auto;
     opacity: 1 !important;
 }
-
-/* Стили для каждого элемента */
-#moss1 {
-    top: 423px;
-    left: 799px;
-    height: 167px;
+  #moss1 {
+    top: 277px;
+    left: 709px;
+    width: 163px;
+    height: 136px;
+    background-position: 50% 50%;
     transform: rotate(28.48deg);
     background-image: url('../resources/ui/moss1.png');
-}
 
-#moss2 {
-    top: 145px;
-    left: 683px;
-    width: 184px;
-    height: 141px;
-    transform: rotate(71.48deg);
+  }
+  
+  #moss2 {
+    top: 341px;
+    left: 477px;
+    width: 101px;
+    height: 75px;
+    background-position: 50% 50%;
+    transform: translate(-2.63px, -37.15px) rotate(71.48deg);
     background-image: url('../resources/ui/moss2.png');
-}
 
-#moss3 {
-    top: 261px;
-    left: 757px;
-    width: 140px;
-    height: 210px;
-    transform: translate(2.24px, 0.32px) rotate(-20.48deg);
+  }
+  
+  #moss3 {
+    top: 372px;
+    left: 624px;
+    width: 114px;
+    height: 170px;
+    background-position: 50% 50%;
+    transform: translate(1.8px, 0.26px) rotate(-20.48deg);
     background-image: url('../resources/ui/moss4.png');
-}
 
-#moss4 {
-    top: 474px;
-    left: 632px;
-    width: 129px;
-    height: 211px;
+  }
+  
+  #moss4 {
+    top: 436px;
+    left: 505px;
+    width: 105px;
+    height: 171px;
+    background-position: 50% 50%;
     background-image: url('../resources/ui/moss4.png');
-}
 
-#moss5 {
-    top: 399px;
-    left: 621px;
+  }
+  
+  #moss5 {
+    top: 318px;
+    left: 688px;
+    width: 105px;
+    height: 109px;
+    background-position: 50% 50%;
     background-image: url('../resources/ui/moss5.png');
-}
 
-#moss6 {
-    top: 540px;
-    left: 455px;
-    transform: rotate(-129.05deg);
+  }
+  
+  #moss6 {
+    top: 524px;
+    left: 643px;
+    width: 163px;
+    height: 146px;
+    background-position: 50% 50%;
+    transform: translate(-9.19px, -37.77px) rotate(-207.34deg);
     background-image: url('../resources/ui/moss6.png');
-}
 
-#moss7 {
-    top: 434px;
-    left: 371px;
-    transform: rotate(72.42deg);
+  }
+  
+  #moss7 {
+    top: 494px;
+    left: 417px;
+    width: 120px;
+    height: 135px;
     z-index: 1000;
+    background-position: 50% 50%;
+    transform: translate(-57.65px, -10.97px) rotate(72.42deg);
     background-image: url('../resources/ui/moss1.png');
-}
 
-#moss8 {
-    top: 460px;
-    left: 313px;
-    width: 189px;
-    height: 158px;
-    transform: rotate(79.42deg);
+  }
+  
+  #moss8 {
+    top: 566px;
+    left: 497px;
+    width: 153px;
+    height: 128px;
+    background-position: 50% 50%;
+    transform: rotate(-31.43deg);
     background-image: url('../resources/ui/moss2.png');
-}
 
-#moss9 {
-    top: 411px;
-    left: 503px;
-    width: 127px;
-    height: 175px;
-    transform: translate(-2.4px, -0.45px) rotate(5.76deg);
+  }
+  
+  #moss9 {
+    top: 376px;
+    left: 362px;
+    width: 82px;
+    height: 123px;
+    background-position: 50% 50%;
+    transform: translate(-1px, 0.7px) rotate(5.76deg);
     background-image: url('../resources/ui/moss3.png');
-}
 
-#moss10 {
-    top: 253px;
-    left: 361px;
-    width: 141px;
-    height: 219px;
-    transform: rotate(8.65deg);
+  }
+  
+  #moss10 {
+    top: 240px;
+    left: 431px;
+    width: 84px;
+    height: 122px;
+    background-position: 50% 50%;
+    transform: translate(4.97px, 2.19px) rotate(8.65deg);
     background-image: url('../resources/ui/moss4.png');
-}
 
-#moss11 {
-    top: 139px;
-    left: 413px;
+  }
+  
+  #moss11 {
+    top: 352px;
+    left: 502px;
+    width: 137px;
+    height: 109px;
+    background-position: 50% 50%;
+    transform: translate(1.31px, -7.9px) rotate(35.48deg);   
+    background-image: url('../resources/ui/moss5.png');
+
+  }
+  
+  #moss12 {
+    top: 208px;
+    left: 634px;
+    width: 142px;
+    height: 128px;
+    z-index: 1000;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss6.png');
+
+  }
+  
+  #moss13 {
+    top: 57px;
+    left: 596px;
+    width: 158px;
+    height: 150px;
+    background-position: 50% 50%;
+    transform: translate(21.8px, -8.5px) rotate(61.27deg);
+    background-image: url('../resources/ui/moss1.png');
+
+  }
+  
+  #moss14 {
+    top: 146px;
+    left: 684px;
+    width: 163px;
+    height: 124px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss2.png');
+
+  }
+  
+  #moss15 {
+    top: 264px;
+    left: 360px;
+    width: 71px;
+    height: 123px;
+    background-position: 50% 50%;
+    transform: translate(8.16px, 5.12px) rotate(-0.26deg);
+    background-image: url('../resources/ui/moss3.png');
+
+  }
+  
+  #moss16 {
+    top: 134px;
+    left: 389px;
+    width: 103px;
     height: 161px;
-    transform: translate(-9px, -2.88px) rotate(35.48deg);
-    background-image: url('../resources/ui/moss5.png');
-}
-
-#moss12 {
-    top: 226px;
-    left: 522px;
-    width: 226px;
-    height: 181px;    
-    z-index: 1000;
-
-    background-image: url('../resources/ui/moss6.png');
-}
-
-#moss13 {
-    top: 301px;
-    left: 373px;
-    width: 195px;
-    height: 186px;
-    transform: translate(27.03px, -10.64px) rotate(61.27deg);
-    background-image: url('../resources/ui/moss1.png');
-}
-#moss14 {
-    top: 492px;
-    left: 522px;
-    height: 154px;
-    background-image: url('../resources/ui/moss2.png');
-}
-
-#moss15 {
-    top: 300px;
-    left: 528px;
-    width: 154px;
-    height: 235px;
-    transform: rotate(-13.03deg);
-    background-image: url('../resources/ui/moss3.png');
-}
-
-#moss16 {
-    top: 166px;
-    left: 482px;
+    background-position: 50% 50%;
     transform: rotate(30.3deg);
-    width: 127px;
-    height: 200px;
     background-image: url('../resources/ui/moss4.png');
-}
 
-#moss17 {
-    top: 55px;
-    left: 489px;
-    width: 159px;
-    height: 138px;
+  }
+  
+  #moss17 {
+    top: 213px;
+    left: 483px;
+    width: 128px;
+    height: 111px;
+    background-position: 50% 50%;
     background-image: url('../resources/ui/moss5.png');
-}
 
-#moss18 {
-    top: 304px;
-    left: 638px;
-    width: 223px;
-    height: 182px;
-    transform: translate(-6.47px, -14.04px) rotate(67.21deg);
+  }
+  
+  #moss18 {
+    top: 81px;
+    left: 578px;
+    width: 136px;
+    height: 111px;
+    background-position: 50% 50%;
+    transform: translate(-24.4px, -17.69px) rotate(67.21deg);
     background-image: url('../resources/ui/moss6.png');
-}
 
-#moss19 {
-    top: 28px;
-    left: 563px;
-    height: 161px;
+  }
+  
+  #moss19 {
+    top: 267px;
+    left: 540px;
+    width: 124px;
+    height: 96px;
+    background-position: 50% 50%;
     background-image: url('../resources/ui/moss1.png');
-}
 
-#moss20 {
-    top: 145px;
-    left: 553px;
-    height: 161px;
+  }
+  
+  #moss20 {
+    top: 117px;
+    left: 446px;
+    width: 163px;
+    height: 130px;
+    background-position: 50% 50%;
     background-image: url('../resources/ui/moss2.png');
-}
+
+  }
+  
+  #moss21 {
+    top: 395px;
+    left: 684px;
+    width: 131px;
+    height: 112px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss5.png');
+
+  }
+  
+  #moss22 {
+    top: 331px;
+    left: 771px;
+    width: 142px;
+    height: 146px;
+    background-position: 50% 50%;
+    transform: translate(12.26px, 18.77px) rotate(-66.29deg);
+    background-image: url('../resources/ui/moss6.png');
+
+  }
+  
+  #moss23 {
+    top: 359px;
+    left: 368px;
+    width: 179px;
+    height: 166px;
+    background-position: 50% 50%;
+    transform: translate(12.36px, -4.58px) rotate(60.36deg);
+    background-image: url('../resources/ui/moss1.png');
+
+  }
+  
+  #moss24 {
+    top: 582px;
+    left: 623px;
+    width: 163px;
+    height: 124px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss2.png');
+
+  }
+  
+  #moss25 {
+    top: 231px;
+    left: 782px;
+    width: 92px;
+    height: 146px;
+    background-position: 50% 50%;
+    transform: rotate(-23.99deg);
+    background-image: url('../resources/ui/moss3.png');
+
+  }
+  
+  #moss26 {
+    top: 272px;
+    left: 620px;
+    width: 79px;
+    height: 115px;
+    background-position: 50% 50%;
+    transform: translate(9.91px, 9.38px) rotate(30.3deg);
+    background-image: url('../resources/ui/moss4.png');
+
+  }
+  
+  #moss27 {
+    top: 63px;
+    left: 477px;
+    width: 128px;
+    height: 123px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss5.png');
+
+  }
+  
+  #moss28 {
+    top: 448px;
+    left: 822px;
+    width: 180px;
+    height: 147px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss6.png');
+
+  }
+  
+  #moss29 {
+    top: 189px;
+    left: 557px;
+    width: 126px;
+    height: 101px;
+    background-position: 50% 50%;
+    transform: rotate(71.5deg);
+    background-image: url('../resources/ui/moss1.png');
+
+  }
+  
+  #moss30 {
+    top: 470px;
+    left: 545px;
+    width: 131px;
+    height: 117px;
+    background-position: 50% 50%;
+    background-image: url('../resources/ui/moss2.png');
+
+    transform: translate(17.48px, -18.33px) rotate(-92.72deg);
+  }
+  
